@@ -19,7 +19,7 @@ import SelectBook from './Pages/SelectBook';
 function App() {
 
     return (
-        <BrowserRouter>
+        <BrowserRouter basename="/index.html">
             <Routes>
                 <Route path="/" element ={<Home/>}/>                     
                 <Route path="/books" element ={<Books/>}/>
