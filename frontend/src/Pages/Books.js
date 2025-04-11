@@ -32,7 +32,7 @@ class Books extends Component {
                     </thead>
                     <tbody>
                         {
-                            this.state.books
+                            this.state.books && this.state.books
                             .map(book =>
                                 <tr>
                                     <th scope="row">{book._id}</th>
