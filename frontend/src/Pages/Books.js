@@ -8,7 +8,7 @@ class Books extends Component {
       }
     
     componentDidMount() {
-    axios.get(`/api/books`)
+    axios.get(`https://ulibrary-qp3d.onrender.com/books`)
         .then(res => {
             const books = res.data;
             this.setState({ books });
@@ -32,7 +32,7 @@ class Books extends Component {
                     </thead>
                     <tbody>
                         {
-                            this.state.books && this.state.books
+                            this.state.books
                             .map(book =>
                                 <tr>
                                     <th scope="row">{book._id}</th>
