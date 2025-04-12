@@ -8,7 +8,9 @@ class Books extends Component {
       }
     
     componentDidMount() {
-    axios.get(`/api/books`)
+    axios.get('/api/books',{
+        withCredentials: false    
+    })
         .then(res => {
             const books = res.data;
             this.setState({ books });
