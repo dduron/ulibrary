@@ -32,7 +32,7 @@ function App() {
                 <Route path="/selectuser" element ={<SelectUser/>}/>
                 <Route path="/user" element ={<User/>}/>
                 <Route path="/returnbook" element ={<ReturnBook/>}/>
-                <Route path="/selectbook" element ={<SelectBook/>}/>
+                <Route path="/selectbook/*" element ={<SelectBook/>}/>
                 <Route path="/reservebook" element ={<ReserveBook/>}/>
                 <Route path="/userprofile" element ={<UserProfile/>}/>
             </Routes>
