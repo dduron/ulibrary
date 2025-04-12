@@ -7,7 +7,7 @@ class SelectUser extends Component {
       }
           
     componentDidMount() {
-        axios.get(`/api/users`)
+        axios.get(`https://ulibrary-qp3d.onrender.com/users`)
             .then(res => {
                 const users = res.data;
                 this.setState({ users });

@@ -8,7 +8,7 @@ class AvailableBooks extends Component {
       }
     
     componentDidMount() {
-    axios.get(`/api/books/available`)
+    axios.get(`https://ulibrary-qp3d.onrender.com/books/available`)
         .then(res => {
             const books = res.data;
             this.setState({ books });

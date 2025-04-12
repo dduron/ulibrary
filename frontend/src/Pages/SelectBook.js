@@ -12,7 +12,7 @@ class SelectBook extends Component {
         if(urlParams.get('userid') == null || urlParams.get('userid') == undefined || urlParams.get('userid').trim() == "") {
             window.location.href = "selectuser";
         } else {
-            axios.get(`/api/books/available`)
+            axios.get(`https://ulibrary-qp3d.onrender.com/books/available`)
             .then(res => {
                 const books = res.data;
                 this.setState({ books });

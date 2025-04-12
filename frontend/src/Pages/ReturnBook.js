@@ -9,7 +9,7 @@ class ReturnBook extends Component {
         urlParams.get('bookid') == null || urlParams.get('bookid') == undefined || urlParams.get('bookid').trim() == "") {
             window.location.href = "selectuser?role=librarian";
         } else {
-            axios.delete('/api/users', {data: { userId: urlParams.get('userid'),
+            axios.delete('https://ulibrary-qp3d.onrender.com/users', {data: { userId: urlParams.get('userid'),
                 bookId: urlParams.get('bookid') }})
                 .then(res => {
                     window.location.href = "user?userid=" + urlParams.get('userid');

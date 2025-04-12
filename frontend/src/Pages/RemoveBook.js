@@ -19,7 +19,7 @@ class RemoveBook extends Component {
     handleSubmit = event => {
         event.preventDefault();
 
-        axios.delete('/api/users', {data: { userId: this.state.userId,
+        axios.delete('https://ulibrary-qp3d.onrender.com/users', {data: { userId: this.state.userId,
             bookId: this.state.bookId }})
             .then(res => {
                 alert("Book removed from user! Check the list of users");

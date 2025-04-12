@@ -12,7 +12,7 @@ class UserProfile extends Component {
         if(urlParams.get('userid') == null || urlParams.get('userid') == undefined || urlParams.get('userid').trim() == "") {
             window.location.href = "selectuser";
         } else {
-            axios.get('/api/users/'+urlParams.get('userid'))
+            axios.get('https://ulibrary-qp3d.onrender.com/users/'+urlParams.get('userid'))
             .then(res => {
                 const user = res.data;
                 this.setState({ user });
