@@ -37,7 +37,7 @@ class User extends Component {
                 {
                     this.state.user.books?.map(book =>
                         <ul>
-                            <li><a href="#" onClick={() => { this.handleClick(book._id) }}>{book.title}</a></li>   
+                            <li><button onClick={() => { this.handleClick(book._id) }}>Select</button>{book.title}</li>   
                         </ul>                       
                     )
                 }

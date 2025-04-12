@@ -30,7 +30,7 @@ class SelectUser extends Component {
                 <table>
                     <thead>
                         <tr>
-                            <th scope="col">ID</th>
+                            <th scope="col"></th>
                             <th scope="col">First Name</th>
                             <th scope="col">Last Name</th>
                             <th scope="col">Email</th>
@@ -43,7 +43,7 @@ class SelectUser extends Component {
                             this.state.users
                             .map(user =>
                                 <tr>
-                                    <th scope="row"><a href="#" onClick={() => { this.handleClick(user._id) }}>{user._id}</a></th>
+                                    <th scope="row"><button onClick={() => { this.handleClick(user._id) }}>Select</button></th>
                                     <td>{user.firstName}</td>
                                     <td>{user.lastName}</td>
                                     <td>{user.email}</td>

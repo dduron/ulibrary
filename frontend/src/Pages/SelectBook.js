@@ -33,7 +33,7 @@ class SelectBook extends Component {
                 <table>
                     <thead>
                         <tr>
-                            <th scope="col">ID</th>
+                            <th scope="col"></th>
                             <th scope="col">Title</th>
                             <th scope="col">Author</th>
                             <th scope="col">Year</th>
@@ -46,7 +46,7 @@ class SelectBook extends Component {
                             this.state.books
                             .map(book =>
                                 <tr>
-                                    <th scope="row"><a href="#" onClick={() => { this.handleClick(book._id) }}>{book._id}</a></th>
+                                    <th scope="row"><button onClick={() => { this.handleClick(book._id) }}>Select</button></th>
                                     <td>{book.title}</td>
                                     <td>{book.author}</td>
                                     <td>{book.year}</td>
