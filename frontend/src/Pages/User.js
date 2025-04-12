@@ -9,13 +9,13 @@ class User extends Component {
 
     handleClick(bookid) {
         const urlParams = new URLSearchParams(window.location.search);
-        document.location.href ="returnbook?userid=" + urlParams.get('userid') + "&bookid=" + bookid;
+        window.location.href ="returnbook?userid=" + urlParams.get('userid') + "&bookid=" + bookid;
     };
     
     componentDidMount() {
         const urlParams = new URLSearchParams(window.location.search);
         if(urlParams.get('userid') == null || urlParams.get('userid') == undefined || urlParams.get('userid').trim() == "") {
-            document.location.href = "selectuser?role=librarian";
+            window.location.href = "selectuser?role=librarian";
         } else {
             axios.get('https://ulibrary-qp3d.onrender.com/users/'+urlParams.get('userid'))
             .then(res => {
@@ -37,7 +37,7 @@ class User extends Component {
                 {
                     this.state.user.books?.map(book =>
                         <ul>
-                            <li><button onClick={() => { this.handleClick(book._id) }}>Select</button>{book.title}</li>   
+                            <li><a href="#" onClick={() => { this.handleClick(book._id) }}>{book.title}</a></li>   
                         </ul>                       
                     )
                 }

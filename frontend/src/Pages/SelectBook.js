@@ -22,7 +22,7 @@ class SelectBook extends Component {
 
     handleClick(bookid) {
         const urlParams = new URLSearchParams(window.location.search);
-        document.location.href ="reservebook?userid=" + urlParams.get('userid') + "&bookid=" + bookid;
+        window.location.href ="reservebook?userid=" + urlParams.get('userid') + "&bookid=" + bookid;
     };
 
     render() {
@@ -33,7 +33,7 @@ class SelectBook extends Component {
                 <table>
                     <thead>
                         <tr>
-                            <th scope="col"></th>
+                            <th scope="col">ID</th>
                             <th scope="col">Title</th>
                             <th scope="col">Author</th>
                             <th scope="col">Year</th>
@@ -46,7 +46,7 @@ class SelectBook extends Component {
                             this.state.books
                             .map(book =>
                                 <tr>
-                                    <th scope="row"><button onClick={() => { this.handleClick(book._id) }}>Select</button></th>
+                                    <th scope="row"><a href="#" onClick={() => { this.handleClick(book._id) }}>{book._id}</a></th>
                                     <td>{book.title}</td>
                                     <td>{book.author}</td>
                                     <td>{book.year}</td>
