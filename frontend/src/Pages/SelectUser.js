@@ -17,9 +17,9 @@ class SelectUser extends Component {
     handleClick(userId) {
         const urlParams = new URLSearchParams(window.location.search);
         if(urlParams.get('role') == "librarian") {
-            window.location.href = "user?userid=" + userId;
+            document.location.href = "user?userid=" + userId;
         } else {
-            window.location.href = "selectbook?userid=" + userId;
+            document.location.href = "selectbook?userid=" + userId;
         }
     };
 

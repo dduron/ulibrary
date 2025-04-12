@@ -22,7 +22,7 @@ class SelectBook extends Component {
 
     handleClick(bookid) {
         const urlParams = new URLSearchParams(window.location.search);
-        window.location.href ="reservebook?userid=" + urlParams.get('userid') + "&bookid=" + bookid;
+        document.location.href ="reservebook?userid=" + urlParams.get('userid') + "&bookid=" + bookid;
     };
 
     render() {

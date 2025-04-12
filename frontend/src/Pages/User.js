@@ -9,13 +9,13 @@ class User extends Component {
 
     handleClick(bookid) {
         const urlParams = new URLSearchParams(window.location.search);
-        window.location.href ="returnbook?userid=" + urlParams.get('userid') + "&bookid=" + bookid;
+        document.location.href ="returnbook?userid=" + urlParams.get('userid') + "&bookid=" + bookid;
     };
     
     componentDidMount() {
         const urlParams = new URLSearchParams(window.location.search);
         if(urlParams.get('userid') == null || urlParams.get('userid') == undefined || urlParams.get('userid').trim() == "") {
-            window.location.href = "selectuser?role=librarian";
+            document.location.href = "selectuser?role=librarian";
         } else {
             axios.get('https://ulibrary-qp3d.onrender.com/users/'+urlParams.get('userid'))
             .then(res => {
